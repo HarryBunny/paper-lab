@@ -312,3 +312,48 @@ Net yields after commission, paid in the coin itself:
 - Income tax is due when staking rewards arrive, even if the coin later falls in value.
 - Many articles about ISA eligibility are out of date.
 - Several sources are vendors or affiliate sites.
+
+## R3-1: Arbitrage and market-neutral methods
+
+**Bottom line:** at Kraken Tier 1–2 fees, none of these methods has evidence of a repeatable net edge.
+
+### Kraken fees
+- **Stablecoin/FX pairs** (USDC/USD, USDT/GBP, GBP/USD) have their own schedule: 0.20% maker and taker. That is 0.40% for a round trip.
+- **Withdrawals:** £1.95 GBP via Faster Payments; 0.000015 BTC.
+- **Coinbase Advanced UK** fees of 0.25/0.50 come from a secondary source only. Coinbase's own page refused the fetch.
+
+### Cross-exchange gaps on GBP pairs: not viable
+- Crépellière et al. (JFM 2023, B): net returns have been negative since 2019, even at 25 bp fees.
+- Flowerday et al. (QFE 2026, B): 80% of mispricing involved Bitfinex. Excluding it, the median gap lasted 2 minutes, and even the 95th percentile is not profitable after 1% costs.
+- Typical gaps are 0.01–0.2%, against a cost of about 1.3%.
+- Gaps open during stress, which is exactly when withdrawals get paused.
+
+### Triangular arbitrage: not viable
+- Muck et al. (FRL 2025, B): 65% of opportunities lasted ≤1 second. Only 18 were profitable in a week, worth about $15 in total, and needed reactions within about 146 ms.
+- Our cost per loop is about 1.8%.
+
+### GBP pair vs USD-implied price (on Kraken)
+- Old papers found deviations, but only before costs.
+- Use this as an execution router (pick the cheaper path), not as a strategy.
+
+### Stablecoin depeg trades
+- The only case where the cost (0.4%) is sometimes below the move.
+- In March 2023, USDC fell to $0.86 and recovered within about 2 days, but only after a US government backstop.
+- Retail can't redeem with the issuer, so this is really a credit or event bet. A coin can fail outright (as TerraUSD did).
+- The tGBP order book is tiny.
+- Testing needs Kraken's free trade downloads.
+
+### Long-only pairs rotation (e.g. ETH/BTC via the direct cross pair)
+- Evidence (C/D): published results are long-short, minute-level, and depend on fees. The daily distance method lost money.
+- **Switching cost:** 0.4–0.8% per switch via the direct cross. At 20 switches a year that is 8–16% a year.
+- **Testing:** it is testable on our data. It must beat a static 50/50 split out of sample.
+
+### Conclusion
+Retail arbitrage on liquid pairs effectively no longer exists. What remains is being paid for taking on risk.
+
+### Ranked shortlist
+1. A stablecoin/FX dislocation watcher, sized small and capped.
+2. ETH/BTC ratio rotation (low prior chance of working).
+3. A GBP-vs-USD deviation monitor, used as an execution router.
+4. A cross-exchange gap index, to measure only.
+5. Triangular arbitrage: no.
