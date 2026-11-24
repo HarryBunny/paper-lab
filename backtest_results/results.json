@@ -1,0 +1,241 @@
+{
+ "generated": "2026-11-24T11:57:01.821969+00:00",
+ "days": 730,
+ "summary": {
+  "run": "base",
+  "kill_switch_would_fire": "2025-07-03",
+  "return_pct": -31.9,
+  "cagr_pct": -17.4,
+  "max_dd_pct": -35.3,
+  "sharpe": -1.17,
+  "trades": 208,
+  "win_rate_pct": 30.3,
+  "profit_factor": 0.61,
+  "fees_gbp": 487.94,
+  "bh_basket_return_pct": -55.6,
+  "bh_btc_return_pct": -37.1,
+  "bh_basket_max_dd_pct": -70.7
+ },
+ "stress": [
+  {
+   "run": "base",
+   "kill_switch_would_fire": "2025-07-03",
+   "return_pct": -31.9,
+   "cagr_pct": -17.4,
+   "max_dd_pct": -35.3,
+   "sharpe": -1.17,
+   "trades": 208,
+   "win_rate_pct": 30.3,
+   "profit_factor": 0.61,
+   "fees_gbp": 487.94,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "double fees",
+   "kill_switch_would_fire": "2025-02-03",
+   "return_pct": -51.7,
+   "cagr_pct": -30.4,
+   "max_dd_pct": -53.2,
+   "sharpe": -2.66,
+   "trades": 208,
+   "win_rate_pct": 23.6,
+   "profit_factor": 0.35,
+   "fees_gbp": 648.04,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "maker fees (0.40%)",
+   "kill_switch_would_fire": "2026-07-28",
+   "return_pct": -10.9,
+   "cagr_pct": -5.6,
+   "max_dd_pct": -27.5,
+   "sharpe": -0.26,
+   "trades": 208,
+   "win_rate_pct": 37.0,
+   "profit_factor": 0.87,
+   "fees_gbp": 311.84,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "breakout 20 bars",
+   "kill_switch_would_fire": "2025-05-02",
+   "return_pct": -46.7,
+   "cagr_pct": -26.9,
+   "max_dd_pct": -49.4,
+   "sharpe": -1.85,
+   "trades": 244,
+   "win_rate_pct": 27.0,
+   "profit_factor": 0.52,
+   "fees_gbp": 517.3,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "breakout 45 bars",
+   "kill_switch_would_fire": "2025-06-30",
+   "return_pct": -31.3,
+   "cagr_pct": -17.1,
+   "max_dd_pct": -35.2,
+   "sharpe": -1.19,
+   "trades": 198,
+   "win_rate_pct": 31.3,
+   "profit_factor": 0.61,
+   "fees_gbp": 453.91,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "stop 2.0 ATR",
+   "kill_switch_would_fire": "2025-05-08",
+   "return_pct": -39.6,
+   "cagr_pct": -22.2,
+   "max_dd_pct": -43.0,
+   "sharpe": -1.46,
+   "trades": 229,
+   "win_rate_pct": 29.7,
+   "profit_factor": 0.59,
+   "fees_gbp": 586.24,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "stop 3.0 ATR",
+   "kill_switch_would_fire": "2025-07-01",
+   "return_pct": -22.0,
+   "cagr_pct": -11.6,
+   "max_dd_pct": -29.2,
+   "sharpe": -0.76,
+   "trades": 190,
+   "win_rate_pct": 33.2,
+   "profit_factor": 0.69,
+   "fees_gbp": 410.15,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "trend only",
+   "kill_switch_would_fire": "2025-05-08",
+   "return_pct": -27.4,
+   "cagr_pct": -14.7,
+   "max_dd_pct": -31.4,
+   "sharpe": -1.11,
+   "trades": 138,
+   "win_rate_pct": 22.5,
+   "profit_factor": 0.56,
+   "fees_gbp": 331.62,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  },
+  {
+   "run": "meanrev only",
+   "kill_switch_would_fire": "never",
+   "return_pct": -6.2,
+   "cagr_pct": -3.2,
+   "max_dd_pct": -14.0,
+   "sharpe": -0.42,
+   "trades": 70,
+   "win_rate_pct": 45.7,
+   "profit_factor": 0.73,
+   "fees_gbp": 181.35,
+   "bh_basket_return_pct": -55.6,
+   "bh_btc_return_pct": -37.1,
+   "bh_basket_max_dd_pct": -70.7
+  }
+ ],
+ "quarters": [
+  {
+   "quarter": "2024-Q4",
+   "bot_pct": -0.6,
+   "bh_basket_pct": 9.7
+  },
+  {
+   "quarter": "2025-Q1",
+   "bot_pct": -3.6,
+   "bh_basket_pct": -31.3
+  },
+  {
+   "quarter": "2025-Q2",
+   "bot_pct": -4.4,
+   "bh_basket_pct": 7.6
+  },
+  {
+   "quarter": "2025-Q3",
+   "bot_pct": 2.7,
+   "bh_basket_pct": 42.8
+  },
+  {
+   "quarter": "2025-Q4",
+   "bot_pct": -2.1,
+   "bh_basket_pct": -38.4
+  },
+  {
+   "quarter": "2026-Q1",
+   "bot_pct": -8.9,
+   "bh_basket_pct": -26.4
+  },
+  {
+   "quarter": "2026-Q2",
+   "bot_pct": -10.3,
+   "bh_basket_pct": -20.6
+  },
+  {
+   "quarter": "2026-Q3",
+   "bot_pct": -7.6,
+   "bh_basket_pct": 66.4
+  },
+  {
+   "quarter": "2026-Q4",
+   "bot_pct": -1.8,
+   "bh_basket_pct": -34.3
+  }
+ ],
+ "one_week": {
+  "windows": 4362,
+  "pct_weeks_positive": 16.2,
+  "median_week_pct": 0.0,
+  "best_week_pct": 12.7,
+  "worst_week_pct": -5.99,
+  "p10_p90_pct": [
+   -2.93,
+   1.16
+  ]
+ },
+ "by_strategy": [
+  {
+   "strategy": "meanrev",
+   "count": 70,
+   "sum": -61.4,
+   "mean": -0.88
+  },
+  {
+   "strategy": "trend",
+   "count": 138,
+   "sum": -257.88,
+   "mean": -1.87
+  }
+ ],
+ "time_in_regime_pct": {
+  "trend_down": 45.4,
+  "trend_up": 42.4,
+  "range": 12.2
+ },
+ "data_notes": [
+  "BTC: 2 gap(s) in 60m candles",
+  "ETH: 2 gap(s) in 60m candles",
+  "SOL: 2 gap(s) in 60m candles",
+  "XRP: not enough Coinbase GBP history, left out of the backtest",
+  "ADA: 73 gap(s) in 60m candles",
+  "LINK: 461 gap(s) in 60m candles"
+ ]
+}
