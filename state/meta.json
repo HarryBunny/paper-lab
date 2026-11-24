@@ -19,8 +19,8 @@
     "LINK": 24.06646731286102
   },
   "bh_btc_units": 0.021708998804008145,
-  "last_bar": "2026-11-24T04:00:00+00:00",
-  "last_stop_check": "2026-11-24T11:00:00+00:00",
+  "last_bar": "2026-11-24T08:00:00+00:00",
+  "last_stop_check": "2026-11-24T12:00:00+00:00",
   "fee_rate": 0.008,
   "data_sources": {
     "BTC": "kraken",
@@ -30,5 +30,14 @@
     "ADA": "kraken",
     "LINK": "kraken"
   },
-  "regime": "trend_down"
+  "regime": "trend_down",
+  "data_note_key": [
+    "ADA 1h",
+    "ADA 4h",
+    "ETH 1h",
+    "LINK 1h",
+    "LINK 4h",
+    "SOL 1h",
+    "XRP 1h"
+  ]
 }

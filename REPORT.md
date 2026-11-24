@@ -4,14 +4,14 @@
 > A one-week result is an anecdote, not evidence. See the backtest section before deciding anything.
 
 **Window:** 2026-11-24T11:32Z → 2026-12-01T11:32Z (running)  
-**Last update:** 2026-11-24T11:32Z  
+**Last update:** 2026-11-24T12:17Z  
 **Market regime:** trend_down
 
 | | Value | Return |
 |---|---:|---:|
 | Bot (paper) | £1,000.00 | +0.00% |
-| Buy & hold, equal-weight basket | £991.17 | -0.88% |
-| Buy & hold, BTC only | £991.50 | -0.85% |
+| Buy & hold, equal-weight basket | £994.71 | -0.53% |
+| Buy & hold, BTC only | £1,001.56 | +0.16% |
 
 Max drawdown 0.0% · closed trades 0 · win rate —% · profit factor — · avg —R · fees paid £0.00
 
@@ -39,6 +39,13 @@ None yet.
 
 ## Event log
 
+- `2026-11-24 12:17Z` 🔎 data: LINK 1h: 168 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: LINK 4h: 4 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: ADA 1h: 183 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: ADA 4h: 2 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: XRP 1h: 3 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: SOL 1h: 1 zero-volume bar(s)
+- `2026-11-24 12:17Z` 🔎 data: ETH 1h: 3 zero-volume bar(s)
 - `2026-11-24 11:32Z` 🔎 data: LINK 1h: 168 zero-volume bar(s)
 - `2026-11-24 11:32Z` 🔎 data: LINK 4h: 4 zero-volume bar(s)
 - `2026-11-24 11:32Z` 🔎 data: ADA 1h: 184 zero-volume bar(s)
