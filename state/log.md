@@ -1,0 +1,9 @@
+- `2026-11-24 11:32Z` 🟢 Lab started with £1,000 paper cash. Ends 2026-12-01T11:32Z.
+- `2026-11-24 11:32Z` 🧭 Regime: — → **trend_down**
+- `2026-11-24 11:32Z` 🔎 data: ETH 1h: 3 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: SOL 1h: 1 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: XRP 1h: 3 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: ADA 4h: 2 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: ADA 1h: 184 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: LINK 4h: 4 zero-volume bar(s)
+- `2026-11-24 11:32Z` 🔎 data: LINK 1h: 168 zero-volume bar(s)

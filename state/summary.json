@@ -1,0 +1,59 @@
+{
+ "lab": "Bunny Paper Lab",
+ "start": "2026-11-24T11:32:57.310243+00:00",
+ "end": "2026-12-01T11:32:57.310243+00:00",
+ "ended": null,
+ "updated": "2026-11-24T11:32Z",
+ "regime": "trend_down",
+ "equity": 1000.0,
+ "cash": 1000.0,
+ "fees_paid": 0.0,
+ "bh_basket": 991.17,
+ "bh_btc": 991.5,
+ "halted": false,
+ "halt_reason": null,
+ "stats": {
+  "return_pct": 0.0,
+  "max_drawdown_pct": 0.0,
+  "trades": 0,
+  "win_rate_pct": null,
+  "profit_factor": null,
+  "avg_r": null,
+  "worst_trade_gbp": null,
+  "best_trade_gbp": null
+ },
+ "positions": {},
+ "trades": [],
+ "prices": {
+  "BTC": 45672.5,
+  "ETH": 1286.88,
+  "SOL": 53.78,
+  "XRP": 0.71045,
+  "ADA": 0.11156,
+  "LINK": 6.863
+ },
+ "equity_curve": [
+  {
+   "time": "2026-11-24T11:32Z",
+   "equity": 1000.0,
+   "cash": 1000.0,
+   "positions": 0,
+   "regime": "trend_down",
+   "bh_basket": 991.17,
+   "bh_btc": 991.5
+  }
+ ],
+ "assumptions": {
+  "fee_per_side": 0.008,
+  "slippage": {
+   "BTC": 0.0005,
+   "ETH": 0.0005,
+   "others": 0.001
+  },
+  "risk_per_trade": 0.01,
+  "daily_loss_limit": 0.03,
+  "kill_switch": 0.1,
+  "leverage": 1.0,
+  "shorts": false
+ }
+}

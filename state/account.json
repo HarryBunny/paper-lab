@@ -1,0 +1,11 @@
+{
+  "cash": 1000.0,
+  "positions": {},
+  "trades": [],
+  "next_id": 1,
+  "day": "2026-11-24",
+  "day_start_equity": 1000.0,
+  "halted": false,
+  "halt_reason": null,
+  "fees_paid": 0.0
+}
