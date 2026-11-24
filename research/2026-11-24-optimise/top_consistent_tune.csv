@@ -1,0 +1,5 @@
+rule,coins,return_pct,max_dd_pct,yr1_pct,yr2_pct,quarters_up,worst_quarter_pct,entries,fills,score
+own MA50 ±2%,BTC+ETH,10.3,-34.1,0.5,9.7,4/9,-13.6,20,40,0.3020527859237537
+own MA50 ±0%,BTC+ETH,10.3,-36.8,2.1,8.1,4/9,-15.2,40,80,0.2798913043478261
+own MA30 ±5%,BTC+ETH,11.4,-45.4,10.5,0.8,4/9,-23.9,16,32,0.2511013215859031
+own MA75 ±0%,BTC+ETH,7.6,-40.0,5.3,2.2,3/9,-13.7,22,44,0.19

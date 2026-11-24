@@ -1,0 +1,13 @@
+{
+ "rules_tested": 195,
+ "profitable_in_tune_window": 24,
+ "profitable_both_years": 4,
+ "data_start": {
+  "BTC": "2017-01-01",
+  "ETH": "2018-09-07",
+  "SOL": "2021-06-17",
+  "ADA": "2021-03-18",
+  "LINK": "2020-07-21"
+ },
+ "top_holdout_profitable": 4
+}
