@@ -28,7 +28,14 @@ def load_history(days: int):
     os.makedirs(f"{OUT}/data", exist_ok=True)
     for coin, (_, prod) in C.UNIVERSE.items():
         path = f"{OUT}/data/{coin}_1h.csv"
-        df = data.coinbase_ohlc(prod, 3600, start, now)
+        try:
+            df = data.coinbase_ohlc(prod, 3600, start, now)
+        except Exception as e:
+            df, _ = None, print(f"{coin}: download failed: {e}")
+        if df is None or len(df) < 24 * 200:
+            notes.append(f"{coin}: not enough Coinbase GBP history, left out of the backtest")
+            print(notes[-1], flush=True)
+            continue
         notes += data.check(df, coin, 60)
         df.to_csv(path)
         h1[coin] = df

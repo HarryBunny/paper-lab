@@ -54,6 +54,8 @@ def coinbase_ohlc(product: str, seconds: int, start: datetime, end: datetime) ->
         url = (f"https://api.exchange.coinbase.com/products/{product}/candles?granularity={seconds}"
                f"&start={cur_start.isoformat()}&end={cur_end.isoformat()}")
         rows = _get(url)
+        if not isinstance(rows, list):  # e.g. {"message": "NotFound"} for an unlisted pair
+            break
         if rows:
             d = pd.DataFrame(rows, columns=["t", "low", "high", "open", "close", "volume"])
             d.index = pd.to_datetime(d["t"], unit="s", utc=True)
