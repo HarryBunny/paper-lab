@@ -194,3 +194,121 @@ None of these has grade-A evidence.
 - **BTC, unseen 2022–26:** expiry weeks −0.27% (net −1.97%), 45% up.
 - **ETH:** negative in both periods.
 - **Verdict: drop.** The effect isn't present, even before costs.
+
+## R3-2: Market-making, grids and limit-order ladders
+
+### Market-making at the touch: not viable
+- **Adverse selection (B+):** "The Market Maker's Dilemma" (Oxford, 233k live Binance orders) found that resting orders fill exactly when the next move goes against them. This held even with a rebate.
+- **Negative fill drift (B):** DeLise measured about −0.45 ticks after each fill.
+- **Moontower (C+):** retail is the slowest quoter in the book, so it is the one that gets picked off.
+- **Fees vs spread:** Kraken's GBP spreads are almost certainly far below our 40 bp maker fee, so the quoted spread can't be captured.
+
+### What a grid really is
+- **A short-volatility trade (B−):** Quantpedia notes that a grid is the mirror image of delta-hedging a short straddle.
+- **Zero edge on a random walk (B):** a National Taiwan University paper proves a static grid has zero expected value on a random walk, and negative once fees are added. Its 60–70% IRR came from bull-market exposure at 0.08% fees.
+- **Closest comparable test (C):** cart0ne (dev.to, July 2026) used Kraken's 0.40% fee and found:
+  - lost less than holding in a bear month, but still lost;
+  - sideways months returned under 1%;
+  - captured about 10% of a +207% bull month.
+  - The author's verdict: "an airbag, not an engine".
+
+### Fees and spacing
+- **Kraken (A):** maker fee is 0.40% at Tier 1, 0.30% at Tier 2 and 0.22% at Tier 3 ($10k).
+- **Profit per day:** roughly (σ²/s²)(s/2 − f), where σ is daily volatility, s the grid step and f the fee. Steps need s > 2f to profit, and the optimum is near s ≈ 4f: about 1.6% at Tier 1 and 1.2% at Tier 2. Add an adverse-selection haircut on top.
+- **Mean reversion required:** any edge needs prices to mean-revert at the 1–3% scale more than a random walk would. This has to be tested, not assumed.
+
+### Realistic expectation for a capped grid at Tier 1–2
+- About −15% to +10% a year, median near zero.
+- Max drawdown roughly equals the inventory cap × the coin's drawdown before the stop triggers.
+
+### Kraken GBP flash crashes (2019, 2021)
+- Use marketable-limit stops with a slippage cap, not market orders.
+- Be careful around the FX market close and at weekends.
+
+### UK tax: the 30-day rule
+In a falling market, a grid can show taxable gains while the account is down on a mark-to-market basis. It also creates hundreds of disposals that each need matching.
+
+### Design to test: long-only ladder on hourly BTC/GBP (ETH as secondary)
+- **Starting position:** £1k, all in GBP.
+- **Buy levels:** 10 levels below the reference price P0, each a step s below the last, with s = 1.5% (also sweep 1, 2 and 3%).
+- **Size:** £50 per level, with crypto capped at 50% of equity.
+- **Sells:** each filled buy gets a paired sell one step above it (ping-pong).
+- **Re-centring:** the reference price can only be moved up, and only when holding no inventory.
+- **Stop:** an hourly close more than 3 steps below the lowest level, or a −15% drawdown from the high. Exit at 0.80% plus 0.3% slippage, pause 7 days, then re-centre.
+- **Fill rules:**
+  - price must trade 0.10% through the level;
+  - an order placed in a bar can only fill from the next bar;
+  - ambiguous bars take the adverse fill;
+  - a 0.10% adverse-selection penalty per fill (also test 0.05% and 0.2%);
+  - a wick filter that ignores spikes more than 5% beyond both the open and the close;
+  - split P&L into grid capture versus inventory mark-to-market.
+- **Benchmarks:** cash; buy-and-hold BTC; a constant 25% BTC / 75% GBP split rebalanced monthly.
+- **Pass criteria:**
+  - positive in at least 2 of 3 market regimes;
+  - beats the 25/75 split on return per unit of max drawdown;
+  - survives a 0.2% trade-through and 0.2% penalty;
+  - no more than 20% of P&L from ambiguous bars.
+- **Daily-data stress test (2017+):** only steps of 3% or more, and treat the results as upper bounds.
+
+### When it loses
+- Sustained downtrends (2022, 2025–26).
+- Strong uptrends: it sits in cash and underperforms.
+- Low-volatility chop: too few fills to matter.
+- Flash crashes on thin GBP books.
+- Any shift from mean reversion to momentum.
+
+## R3-6: Yield, staking, accumulation and tax wrappers
+
+### Bottom line
+Nothing available to UK retail is market-neutral. The only market-neutral option, cash-and-carry, needs derivatives, which UK retail can't use.
+
+### The benchmark to beat: GBP savings
+- Easy-access accounts pay 4.5–5.25% AER (Moneyfacts, 24 Nov 2026), and a cash ISA pays 4.90%.
+- That return is in GBP, with no price risk, and is FSCS-protected.
+- Bank Rate is 4.00% (raised 5 Nov 2026).
+
+### Staking: available in the UK on Kraken and Coinbase
+Net yields after commission, paid in the coin itself:
+
+| Coin | Net yield | Caveat |
+|---|---|---|
+| ETH | about 2.1–2.3% | |
+| SOL | about 4–4.5% | About 1% in real terms, because SOL's supply inflates about 4.7% a year |
+| ADA | about 1.5–1.9% | |
+
+- **Commission:** Kraken takes 25–30%, Coinbase about 35%.
+- **Lock-ups:** from none up to 28 days, and ETH exit queues can take weeks.
+- **Protection:** no FSCS cover.
+- **Tax:** rewards are taxed as income when you receive them, then CGT applies when you sell (A).
+- **Main risk:** the coin's price. A 2–4% yield is tiny next to a ±50% price swing.
+
+### Crypto lending and "Earn" products
+- Kraken's Opt-in Rewards and DeFi Earn are blocked in the UK. Coinbase UK only offers borrowing.
+- Celsius customers became unsecured creditors when it failed.
+- The FCA's new regime starts 25 Oct 2027, still with no FSCS cover.
+
+### Stablecoin yields
+- Typically about 3–5% in USD.
+- Risks: GBP/USD exchange-rate moves, platform failure, depegging (USDC fell to 87¢ in March 2023), and no FSCS cover.
+- Not better than GBP savings.
+- From 6 Apr 2027, eligible stablecoins become exempt from CGT.
+
+### Cash-and-carry basis trades
+- Not legal for UK retail: the derivatives ban still applies even though crypto ETNs are now allowed.
+- Even where available, the CME basis was only about 3% (Aug 2026), below Treasury yields.
+
+### Accumulation methods: none adds return
+- **DCA:** lump-sum investing beats DCA 62–74% of the time (Vanguard). DCA's benefit is behavioural.
+- **Value averaging:** no expected-return gain (Hayley).
+- **Dip-buying ladders:** no evidence they help. Their only real saving is that maker orders cost less in fees.
+
+### Tax wrappers
+- Crypto ETNs could go in a stocks & shares ISA from Oct 2025, but **new purchases were removed from 6 Apr 2026**.
+- They are allowed in an Innovative Finance ISA, but almost no providers offer one.
+- They are allowed in a SIPP: e.g. Hargreaves Lansdown from Sep 2026 (BTC/ETH ETNs, 0.15–0.35% a year in fees), locked until age 57.
+- Staking ETNs (CoinShares, 21Shares) held in a SIPP are the only route found that combines yield with a tax wrapper.
+
+### Red flags
+- Income tax is due when staking rewards arrive, even if the coin later falls in value.
+- Many articles about ISA eligibility are out of date.
+- Several sources are vendors or affiliate sites.
