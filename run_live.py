@@ -151,8 +151,12 @@ def main(now=None, snapshot=None):
         w.writerow([now.strftime("%Y-%m-%dT%H:%MZ"), round(eq, 2), round(acct.cash, 2),
                     len(acct.positions), meta.get("regime", reg), round(basket, 2), round(btc, 2)])
 
-    for n in notes:
-        events.append(f"🔎 data: {n}")
+    # only log data-quality notes when they change, so the log stays readable
+    note_key = sorted(n.split(":")[0] for n in notes)
+    if note_key != meta.get("data_note_key"):
+        meta["data_note_key"] = note_key
+        for n in notes:
+            events.append(f"🔎 data: {n}")
 
     log(events, now)
     save(ACCT, acct.to_dict())
