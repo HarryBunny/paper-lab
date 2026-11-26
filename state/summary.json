@@ -3,13 +3,13 @@
  "start": "2026-11-24T11:32:57.310243+00:00",
  "end": "2026-12-01T11:32:57.310243+00:00",
  "ended": null,
- "updated": "2026-11-26T00:13Z",
+ "updated": "2026-11-26T08:51Z",
  "regime": "trend_down",
  "equity": 1000.0,
  "cash": 1000.0,
  "fees_paid": 0.0,
- "bh_basket": 993.82,
- "bh_btc": 1001.54,
+ "bh_basket": 1002.78,
+ "bh_btc": 1002.68,
  "halted": false,
  "halt_reason": null,
  "stats": {
@@ -25,12 +25,12 @@
  "positions": {},
  "trades": [],
  "prices": {
-  "BTC": 46134.8,
-  "ETH": 1290.14,
-  "SOL": 53.71,
-  "XRP": 0.71499,
-  "ADA": 0.11085,
-  "LINK": 6.895
+  "BTC": 46187.3,
+  "ETH": 1288.94,
+  "SOL": 54.05,
+  "XRP": 0.72693,
+  "ADA": 0.11293,
+  "LINK": 6.979
  },
  "equity_curve": [
   {
@@ -86,6 +86,15 @@
    "regime": "trend_down",
    "bh_basket": 993.82,
    "bh_btc": 1001.54
+  },
+  {
+   "time": "2026-11-26T08:51Z",
+   "equity": 1000.0,
+   "cash": 1000.0,
+   "positions": 0,
+   "regime": "trend_down",
+   "bh_basket": 1002.78,
+   "bh_btc": 1002.68
   }
  ],
  "assumptions": {

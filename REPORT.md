@@ -4,14 +4,14 @@
 > A one-week result is an anecdote, not evidence. See the backtest section before deciding anything.
 
 **Window:** 2026-11-24T11:32Z → 2026-12-01T11:32Z (running)  
-**Last update:** 2026-11-26T00:13Z  
+**Last update:** 2026-11-26T08:51Z  
 **Market regime:** trend_down
 
 | | Value | Return |
 |---|---:|---:|
 | Bot (paper) | £1,000.00 | +0.00% |
-| Buy & hold, equal-weight basket | £993.82 | -0.62% |
-| Buy & hold, BTC only | £1,001.54 | +0.15% |
+| Buy & hold, equal-weight basket | £1,002.78 | +0.28% |
+| Buy & hold, BTC only | £1,002.68 | +0.27% |
 
 Max drawdown 0.0% · closed trades 0 · win rate —% · profit factor — · avg —R · fees paid £0.00
 
